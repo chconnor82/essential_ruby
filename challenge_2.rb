@@ -10,15 +10,16 @@ require './challenge_1.rb'
 # Below is an array of hashes. Each hash in the array represents one rate quote from a bank.
 
 loan_quotes = [
-  { "bank" => "Elm Street Bank", "rate" => 0.013},
-  { "bank" => "Oak Street Bank", "rate" => 0.009},
-  { "bank" => "Ash Street Bank", "rate" => 0.011}
+  { "bank" => "Elm Street Bank", "interest_rate" => 0.013},
+  { "bank" => "Oak Street Bank", "interest_rate" => 0.009},
+  { "bank" => "Ash Street Bank", "interest_rate" => 0.011}
 ]
+
 
 # Given some parameters of the loan, perhaps entered by a user on a web form:
 
-number_of_payments = 180
-principal_amount = 100000.0
+number_of_years = 9
+principal_value_of_loan = 100000.0
 
 # Now, loop through the array of loan quotes using .each:
 #   For each option, tell the user how much the monthly payment will be to that bank.
@@ -27,3 +28,12 @@ principal_amount = 100000.0
 # ====================
 # Your code goes here.
 # ====================
+
+loan_quotes.each do |quotes|
+
+
+
+puts "#{quotes["bank"]} quotes you a monthly payment of $#{loan_payment(quotes["interest_rate"], number_of_years, principal_value_of_loan).round(2)} at a monthly interest rate of #{(quotes[1].inspect.to_f*100).round(2)
+  }"
+
+end
