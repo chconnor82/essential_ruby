@@ -33,7 +33,7 @@ loan_quotes.each do |quotes|
 
 
 
-puts "#{quotes["bank"]} quotes you a monthly payment of $#{loan_payment(quotes["interest_rate"], number_of_years, principal_value_of_loan).round(2)} at a monthly interest rate of #{(quotes[1].inspect.to_f*100).round(2)
-  }"
+puts "#{quotes["bank"]} quotes you a monthly payment of $#{loan_payment(quotes["interest_rate"], number_of_years, principal_value_of_loan).round(2)} at a monthly interest rate of #{(quotes["interest_rate"]*100).round(2)
+  }%"
 
 end
